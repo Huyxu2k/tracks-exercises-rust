@@ -1,9 +1,26 @@
 pub mod macro_init;
-pub mod test_clock;
 pub mod clock;
-pub mod test_Anagram;
 pub mod Anagram;
+pub mod Sublist;
+pub mod Leap;
+pub mod GradeSchool;
+pub mod BeerSong;
 
+///
+/// test
+/// 
+#[cfg(not(test))]
+pub mod test_clock;
+#[cfg(not(test))]
+pub mod test_Anagram;
+#[cfg(not(test))]
+pub mod test_Sublist;
+#[cfg(not(test))]
+pub mod test_Leap;
+#[cfg(not(test))]
+//no commplete
+pub mod test_GradeSchool;
+pub mod test_BeerSong;
 
 use time::PrimitiveDateTime as DateTime;
 
@@ -24,9 +41,11 @@ fn main() {
 
     //let clock= Clock::new(8, 0);
     //println!("{}",clock);
-    let word = "listen";
-    let inputs = ["enlists", "google", "inlets", "banana"];
-    Anagram::anagrams_for(word, &inputs);
+    // let word = "listen";
+    // let inputs = ["enlists", "google", "inlets", "banana"];
+    // Anagram::anagrams_for(word, &inputs);
+
+
 }
 
 ///
